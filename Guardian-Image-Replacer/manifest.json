@@ -1,0 +1,29 @@
+{
+	"name": "Guardian Image Replacer",
+	"description": "Replaces unwanted images.",
+	"author": "Ethan Flake",
+	"manifest_version": 2,
+	"version": "1.0",
+	"browser_action": {
+		"default_title": " Guardian Image Replacer",
+		"default_popup": "index.html",
+		"default_icon": "assets/icon.png"
+	},
+	"content_scripts": [
+		{
+			"matches": ["<all_urls>"],
+			"run_at": "document_end",
+			"js": ["scripts/Main.js"],
+			"all_frames": true
+		}
+	],
+	"homepage_url": "https://github.com/MysteryPancake/Image-Replacer",
+	"icons": {
+		"16": "assets/icon.png",
+		"24": "assets/icon.png",
+		"48": "assets/icon.png",
+		"128": "assets/icon.png"
+	},
+	"permissions": ["storage"],
+	"short_name": "Image Replacer"
+}
