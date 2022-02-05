@@ -3,7 +3,7 @@
 function save() {
 	chrome.storage.sync.set({
 		enabled: document.getElementById("enabled").checked,
-		backgroundimgs: document.getElementById("backgroundimgs").checked,
+		backgroundImgs: document.getElementById("backgroundImgs").checked,
 		url: document.getElementById("url").value
 	}, function() {
 		document.getElementById("submit").value = "Saved";
@@ -13,11 +13,11 @@ function save() {
 function restore() {
 	chrome.storage.sync.get({
 		enabled: false,
-		backgroundimgs: false,
+		backgroundImgs: false,
 		url: ""
 	}, function(items) {
 		document.getElementById("enabled").checked = items.enabled;
-		document.getElementById("backgroundimgs").checked = items.backgroundimgs;
+		document.getElementById("backgroundImgs").checked = items.backgroundImgs;
 		document.getElementById("url").value = items.url;
 	});
 }
@@ -36,6 +36,6 @@ function enter(e) {
 document.addEventListener("DOMContentLoaded", restore);
 document.getElementById("submit").addEventListener("click", save);
 document.getElementById("enabled").addEventListener("click", changed);
-document.getElementById("backgroundimgs").addEventListener("click", changed);
+document.getElementById("backgroundImgs").addEventListener("click", changed);
 document.getElementById("url").addEventListener("input", changed);
 document.getElementById("url").addEventListener("keydown", enter);

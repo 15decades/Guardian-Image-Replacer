@@ -10,7 +10,7 @@ function replace() {
 
 chrome.storage.sync.get({
 	enabled: false,
-	backgroundimgs: false,
+	backgroundImgs: false,
 	url: ""
 }, function(items) {
 	if (items.enabled) {
@@ -28,14 +28,18 @@ let remove = () => {
 	var divs = document.getElementsByTagName("div");
 	for (var i = 0; i < divs.length; i++) {
 		if (divs[i].style.backgroundImage != "none") {
-			divs[i].style.backgroundImage = `url(${url})`;
+			//divs[i].style.backgroundImage = `url(${url})`;
+			divs[i].style.backgroundImage = `none`;
 		}
 	}
 }
 
-chrome.storage.sync.get(["backgroundimgs"], function (result) {
-	url = result.url;
-	if (result.backgroundimgs == true) {
+chrome.storage.sync.get({
+	enabled: false,
+	backgroundImgs: false,
+	url: ""
+}, function (result) {
+	if (result.backgroundImgs) {
 		window.setInterval(remove, 3000);
 		remove();
 }})
