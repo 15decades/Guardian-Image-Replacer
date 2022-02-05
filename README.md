@@ -10,6 +10,6 @@ Installation:
 4. Navigate to the location of the folder named "Guardian-Image-Replacer" (not the folder that ends with main) and select it.
 
 Instructions: 
-1. To remove just images that are set coded as HTML elements with an "img" tag, check the standard images button and hit the save button.
+1. To remove just images that are coded as HTML elements with an "img" tag, check the standard images button and hit the save button.
 2. To remove all images on a page, check both boxes and hit save.
-3. In order for the extension to work properly at this current time a URL for an image must be added to the text box and saved.
+3. In order for the extension to work properly at this current time, a URL for an image must be added to the text box and saved.
